@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Mode</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Light or Dark Mode</h1>
+      <div class="toggle-container">
+        <input type="checkbox" id="theme-switch" name="theme" /><label
+          for="theme-switch"
+          >Toggle</label
+        >
+      </div>
+
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi, ex?</p>
+    </div>
+
+    <script>
+      document.querySelector("#theme-switch").onclick = (e) => {
+        const htmlNode = document.getRootNode().documentElement;
+
+        if (e.target.checked) {
+          htmlNode.dataset.theme = "dark";
+        } else {
+          htmlNode.dataset.theme = "light";
+        }
+      };
+    </script>
+  </body>
+</html>
